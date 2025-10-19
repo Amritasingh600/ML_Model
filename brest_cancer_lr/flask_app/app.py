@@ -25,8 +25,10 @@ def home():
         
         # Call your backend prediction
         prediction = predict_tumor(input_features)
-        
-        result = f'Tumor is likely: {prediction}'
+        if(prediction==0):
+            result = f'Tumor is likely: benign'
+        else:
+            result = f'Tumor is likely: malignant'
     
     return render_template('index.html', result=result)
 

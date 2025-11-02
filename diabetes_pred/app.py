@@ -3,7 +3,7 @@ import pandas as pd
 import joblib
 
 # Load trained pipeline
-pipeline = joblib.load('logreg_pipeline_diabetes.pkl')
+pipeline = joblib.load('final_model_pipeline.pkl')
 
 st.title("Diabetes Prediction Web App")
 st.write("Enter your health details to predict diabetes risk.")
